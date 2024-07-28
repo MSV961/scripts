@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e # stop if error
+set -u # check unset variables
+
+# Parsing file
+users_file=/home/msv/scripts/skillfactory/users.txt
+find_user=`awk -F# '{ print $1 }' $users_file`
+
+
+# Creating users
+create_users () {
+
+	for users in $find_user 
+		do
+			user_dir=/home/$users
+			sudo useradd -m $users 
+			sudo echo "Greetings!" >> $user_dir/greetings
+			sudo echo "Hello $users, it nice to meet you!" >> $user_dir/greetings
+			sudo chown -R $users:$users /home/$users/greetings
+		done
+}
+
+# Set password
+set_pass () {
+
+	sudo chpasswd < pass.txt
+}
+
+create_users
+set_pass
