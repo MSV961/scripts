@@ -4,7 +4,7 @@ set -eu
 
 nginxstatus=$(sudo systemctl status nginx.service | grep -Eo 'running|dead|failed')
 nginxlogs=$(journalctl -u nginx.service > ~/errornginx 2>&1)
-serveraddress='192.168.3.20'
+serveraddress='IP'
 
 nginx_status () {
 	if [[ $nginxstatus = 'running' ]]; 
