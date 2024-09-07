@@ -5,8 +5,8 @@ set -eu
 # Variables
 nginxstatus=$(sudo systemctl status nginx.service | grep -Eo 'running|dead|failed')
 nginxlogs=$(journalctl -u nginx.service > ~/errornginx 2>&1)
-serveraddress='79.174.12.165'
-tg="/root/scripts/telegram.sh"
+serveraddress='IP'
+tg="///"
 
 
 main () {
