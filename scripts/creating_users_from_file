@@ -4,7 +4,7 @@ set -e # stop if error
 set -u # check unset variables
 
 # Parsing file
-users_file=/home/msv/scripts/skillfactory/users.txt
+users_file=////
 find_user=`awk -F# '{ print $1 }' $users_file`
 
 
