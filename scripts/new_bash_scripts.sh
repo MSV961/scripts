@@ -13,7 +13,7 @@ if [[ -e $filename ]]; then
 else
 	touch $filename
 	chmod 755 $filename
-	echo '#! /bin/bash' > $filename && echo 'set -e' >> $filename && echo 'set -u' >> $filename
+	echo '#! /bin/bash' > $filename && echo 'set -e' >> $filename
 	vim $filename
 fi 
 
