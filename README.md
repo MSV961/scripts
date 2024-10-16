@@ -27,3 +27,6 @@
 
 ## dns_exercise.sh
 По сути просто учебный скипт, смотрит DNS по домену и записи
+
+## install_nginx_mainline.sh
+Установка mainline версии nginx из офф репозитория
